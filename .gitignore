@@ -13,7 +13,6 @@ tmp/
 *.log
 
 *.class
-*.jar
 *.war
 *.ear
 *.db
