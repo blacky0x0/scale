@@ -1,7 +1,7 @@
 group 'scale'
 version '1.0-SNAPSHOT'
 
-// Set the plugins in the beginning
+// Set plugins in the beginning
 apply plugin: 'spring-boot'
 
 buildscript {
@@ -15,6 +15,7 @@ buildscript {
 }
 
 dependencies {
+    compile("com.google.guava:guava:19.0")
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
