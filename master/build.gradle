@@ -1,15 +1,20 @@
 group 'scale'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+// Set the plugins in the beginning
+apply plugin: 'spring-boot'
 
-targetCompatibility = 1.8
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+buildscript {
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
 }
 
 dependencies {
-
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }

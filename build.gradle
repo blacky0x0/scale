@@ -2,14 +2,21 @@ group 'scale'
 version '1.0-SNAPSHOT'
 
 subprojects {
-    apply plugin: 'groovy'
-    apply plugin: "java"
-
+    // Set the plugins in the beginning
+    // include the java plugin & set parameters to it
+    apply plugin: 'java'
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
     compileJava.options.encoding = 'UTF-8'
 
-    repositories { jcenter() }
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    ext {
+        springBootVersion = '1.3.2.RELEASE'
+    }
 }
 
 task wrapper(type: Wrapper) {
