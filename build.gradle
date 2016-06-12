@@ -2,7 +2,7 @@ group 'scale'
 version '1.0-SNAPSHOT'
 
 subprojects {
-    // Set the plugins in the beginning
+    // Set plugins in the beginning
     // include the java plugin & set parameters to it
     apply plugin: 'java'
     sourceCompatibility = 1.8
