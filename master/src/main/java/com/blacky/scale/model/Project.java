@@ -1,6 +1,7 @@
 package com.blacky.scale.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Project implements Serializable {
     private Long id;
@@ -25,5 +26,20 @@ public class Project implements Serializable {
 
     public String getData() {
         return data;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+        return Objects.equals(id, project.id) &&
+                Objects.equals(version, project.version) &&
+                Objects.equals(data, project.data);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

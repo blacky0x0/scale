@@ -1,3 +1,5 @@
 curl -X GET http://localhost:8080/projects
 curl -X GET http://localhost:8080/failed
 curl -X POST http://localhost:8080/projects/10/data/any_data/
+
+curl -X POST http://localhost:8081/projects/10/ -H 'Content-Type: application/json' -d '{"version":2,"data":"some data"}'
